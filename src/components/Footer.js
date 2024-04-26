@@ -6,6 +6,8 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import { FaEnvelope } from "react-icons/fa";
+
 
 function Footer() {
   let date = new Date();
@@ -59,6 +61,15 @@ function Footer() {
                 rel="noopener noreferrer"
               >
                 <AiFillInstagram />
+              </a>
+            </li>
+            {/* Email Link */}
+            <li className="social-icons">
+              <a
+                href="mailto:samikhan7816@gmail.com"
+                style={{ color: "white" }}
+              >
+                <FaEnvelope />
               </a>
             </li>
           </ul>
