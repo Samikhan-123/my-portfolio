@@ -11,7 +11,6 @@ import {
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
@@ -37,9 +36,9 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex">
-          <span className="purple fw-bold">
+          <h4 className="purple fw-bold">
             SK .
-          </span>
+          </h4>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
@@ -57,7 +56,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/"
-                activeclassname="active-link"
+                activeclassname="active"
                 onClick={() => updateExpanded(false)}>
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
               </Nav.Link>

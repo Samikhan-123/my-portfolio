@@ -11,9 +11,20 @@ html {
 
   --imp-text-color: #f3670a;
 }
-
+.img-fluid {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
 .purple {
   color: #f3670a !important;
+  letter-spacing: 2px;
 }
 
 button:focus {
@@ -30,14 +41,14 @@ button:focus {
   width: 100%;
   height: 100%;
   z-index: 999999;
-  background-color: rgba(224, 104, 23, 0.562);
+  background-color: rgba(247, 103, 8, 0.262);
   background-image: url(./Assets/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
 }
 
 #preloader-none {
-  opacity: 0;
+  opacity: 1;
 }
 
 #no-scroll {
@@ -55,18 +66,18 @@ button:focus {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #f3670a;
+  background: rgba(36, 31, 16, 0.678);
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(16, 31, 36, 0.678);
+  background: #f3670a;
   border-radius: 12px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(222, 130, 235, 0.911);
+  background: rgba(228, 135, 73, 0.911);
   border-radius: 12px;
 }
 
@@ -139,7 +150,7 @@ button:focus {
 }
 
 body {
-  background: rgba(46, 40, 35, 0.862) !important;
+  background: rgba(17, 8, 1, 1) !important;
 }
 @media (max-width: 767px) {
   .navbar {
@@ -205,15 +216,12 @@ body {
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
 }
-/* Define styles for the active link */
-.active-link {
-  font-weight: bold !important;
-  color: #f3670a !important; /* Your desired active link color */
+.nav-link .active {
+  color: #f3670a !important; 
 }
 
-/* Optional: Add a hover effect for the active link */
-.active-link:hover {
-  color: #f3670a; /* Change the color on hover */
+.active:hover {
+  color: #f3670a;
 }
 
 /* --------- */
@@ -302,7 +310,7 @@ body {
 }
 .Typewriter__cursor {
   font-size: 2.4em !important;
-  color: #f3670a !important;
+  color: #eba77a !important;
 }
 
 @media (max-width: 767px) {
@@ -530,13 +538,13 @@ body {
 .btn-primary {
   color: #fff !important;
   background-color: #f3670a !important;
-  border-color: #331f44 !important;
+  border-color: #ffb06f !important;
 }
 
 .btn-primary:hover {
   color: #fff !important;
   background-color: #f3670a !important;
-  border-color: #331f44 !important;
+  border-color: #ffb06f !important;
 }
 .btn:focus {
   outline: none !important;
@@ -703,8 +711,8 @@ body {
 }
 
 .like-btn {
-  background-color: #ce874c5e !important;
-  border-color: #934cce5e !important;
+  background-color: #e673145e !important;
+  border-color: #ce964c5e !important;
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
@@ -734,7 +742,6 @@ body {
 .fork-btn {
   font-size: 1.1em !important;
   padding-top: 10px !important;
-
 }
 
 .fork-btn-inner {
@@ -748,7 +755,7 @@ body {
 .fork-btn-inner:hover {
   transform: translateY(-2px) !important;
   background-color: #ce874c5e !important;
-  border-color: #a24dd386 !important;
+  border-color: #d3894d86 !important;
 }
 .fork-btn-inner::after {
   display: none !important;

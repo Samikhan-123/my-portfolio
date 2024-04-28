@@ -11,9 +11,9 @@ function AboutCard() {
             Hi Everyone, I am <span className="purple">SAMI KHAN </span>
             from <span className="purple"> Lahore, Pakistan.</span>
             <br />
-            I am currently looking for a Entry Level Role - internship.
+            I am a MERN stack developer with the expertise of <span className="purple">MongoDB - React.js - Express.js - Node.js</span>
             <br />
-            I am currently studding Bachelors (Virtual University) in Computer Science,
+            I am currently studding Bachelors (Virtual University) in Computer Science (BSCS),
             Lahore.
             <br />
             <br />
@@ -31,7 +31,7 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "rgb(155 126 172)" }}>
+          <p style={{ color: "#f3670a" }}>
             "Strive to build things that make a difference!"
           </p>
           <footer className="blockquote-footer">samikhan</footer>
