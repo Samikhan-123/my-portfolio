@@ -23,7 +23,7 @@ function Home() {
               <h1 className="heading-name">
                 I'M
                 <strong className="main-name"> SAMI KHAN </strong>
-                a Full Stack Developer using <span className="purple">MERN</span> technologies.
+                a Full Stack Developer using <span className="purple">MERN-Stack</span> technologies.
               </h1>
 
               <div style={{ padding: 50, textAlign: "left" }}>

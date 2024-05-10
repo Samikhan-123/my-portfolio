@@ -36,7 +36,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex">
-          <h4 className="purple fw-bold">
+          <h4 className="purple fw-bold main-logo">
             SK .
           </h4>
         </Navbar.Brand>
