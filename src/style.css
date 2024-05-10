@@ -777,7 +777,7 @@ body {
 }
 
 /* animation */
-h1,h2,h3,h4,h5,h6,p,img,a{
+h1,h2,h3,h4,h5,h6,p,img,.nav-link{
   animation: fadeSlideIn .7s ease-in-out forwards; 
 }
 @keyframes fadeSlideIn {
