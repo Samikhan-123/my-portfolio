@@ -92,7 +92,7 @@ button:focus {
 }
 
 .main-logo{
-	animation: flicker 0.5s ease-in-out infinite alternate;
+	animation: flicker 1s ease-in-out infinite alternate;
 }
 @keyframes flicker {
 	0% {
@@ -497,13 +497,16 @@ body {
   box-shadow: 0 4px 5px 3px rgba(235, 182, 69, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
-  opacity: 0.9 !important;
+  opacity: 1 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
 .project-card-view:hover {
+  color: white;
+  opacity: 1;
   transform: scale(1.02) !important;
   overflow: hidden !important;
+  background: #e47003 !important;
   box-shadow: 0 4px 5px 3px rgba(167, 104, 45, 0.459) !important;
 }
 

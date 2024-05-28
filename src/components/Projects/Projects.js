@@ -47,7 +47,7 @@ function Projects() {
               title="E-commerce"
               description="Created a friendly online shopping website with our MERN-powered eCommerce site. W've designed it to be easy to use, so you can browse products, add them to your cart, and securely checkout with confidence. Our website uses MongoDB, Express.js, React, and Node.js to ensure a smooth shopping journey. Whether you're shopping for fashion, or home essentials, our platform is your go-to destination. you can see demo or code on github"
               ghLink="https://github.com/Samikhan-123/Mern-E-commerce-2024"
-              demoLink="https://myecommercesite.cyclic.app/"              
+              demoLink="https://myecommercesite.vercel.app/"              
             />
           </Col>
         </Row>
