@@ -32,9 +32,9 @@ function AboutCard() {
           </ul>
 
           <p style={{ color: "#f3670a" }}>
-            "Develop a vision for transformative impact, inspiring others in the process."
+            "Code is like humor. When you have to explain it, it’s bad."
           </p>
-          <footer className="blockquote-footer">samikhan</footer>
+          <footer className="blockquote-footer">— Cory House</footer>
         </blockquote>
       </Card.Body>
     </Card>
