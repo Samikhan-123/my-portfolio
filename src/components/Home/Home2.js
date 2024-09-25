@@ -29,7 +29,7 @@ function Home2() {
               <br />
               <br />
 
-              <h3>### Main Skills as a <span class='purple'> MERN Stack Developer</span></h3> 
+              <h3>### <span className="purple" > Main Skills</span> as a <span class='purple'> MERN Stack Developer</span></h3> 
               <br />
               <span class='purple'> **MongoDB**</span>
               <br />

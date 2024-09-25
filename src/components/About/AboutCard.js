@@ -31,7 +31,7 @@ function AboutCard() {
             </li>
           </ul>
 
-          <p style={{ color: "#f3670a" }}>
+          <p className="purple">
             "Code is like humor. When you have to explain it, it’s bad."
           </p>
           <footer className="blockquote-footer">— Cory House</footer>

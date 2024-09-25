@@ -17,6 +17,7 @@ function Projects() {
         <p style={{ color: "white" }}>
           Here are a few projects I've worked on recently.
         </p>
+        <div className="p-cards">
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
@@ -34,7 +35,7 @@ function Projects() {
               imgPath={crudapp}
               isBlog={false}
               title="Crud App"
-              description="I created a CRUD application using React.js. The code is available on my GitHub repository,showcasing my front-end development skills. It has a user-friendly interface and utilizes React components for efficient rendering.The project demonstrates my abilities as a React.js developer and my commitment to learning and improving."
+              description="I created a CRUD application using React.js. The code is available on my GitHub repository, showcasing my front-end development skills. It has a user-friendly interface and utilizes React components for efficient rendering.The project demonstrates my abilities as a React.js developer and my commitment to learning and improving."
               ghLink="https://github.com/Samikhan-123/Reactjs-Crud-App"
               demoLink="https://crudapp2323.netlify.app/"
             />
@@ -51,6 +52,7 @@ function Projects() {
             />
           </Col>
         </Row>
+        </div>
       </Container>
     </Container>
   );
