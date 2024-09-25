@@ -10,10 +10,22 @@ function ResumeNew() {
       <Container fluid className="resume-section">
         <Particle />
         <Row style={{ justifyContent: "center", position: "relative" }}>
+        <Button
+            title="resume"
+            variant="primary"
+            href={pdf}
+            download="resume.sk.pdf" // This attribute forces download with a specific filename
+            style={{ maxWidth: "250px" }}
+            className="mb-4"
+          >
+            <AiOutlineDownload />
+            &nbsp;Download CV
+          </Button>
           {/* Display PDF using iframe */}
           <iframe
             title="Resume PDF"
             src={pdf}
+            
             style={{ width: "100%", height: "800px", border: "none" }}
           ></iframe>
         </Row>
@@ -21,10 +33,10 @@ function ResumeNew() {
         {/* Download buttons */}
         <Row className="mt-4" style={{ justifyContent: "center", position: "relative" }}>
           <Button
-            title= "resume"
+            title="resume"
             variant="primary"
             href={pdf}
-            target="_blank"
+            download="resume.sk.pdf" // This attribute forces download with a specific filename
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />
