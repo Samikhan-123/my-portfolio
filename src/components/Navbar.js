@@ -13,7 +13,7 @@ import { CgFileDocument } from "react-icons/cg";
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
-  const [theme, setTheme] = useState("dark"); // Initialize with dark theme
+  const [theme] = useState("dark"); // Initialize with dark theme
 
   useEffect(() => {
     document.body.className = theme; // Apply theme to body
