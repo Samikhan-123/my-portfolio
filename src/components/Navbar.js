@@ -36,9 +36,9 @@ function NavBar() {
   }, [theme]); // Dependency on theme ensures body class updates accordingly
 
   // Function to toggle between light and dark themes
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
+  // const toggleTheme = () => {
+  //   setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
+  // };
 
   return (
     <Navbar
