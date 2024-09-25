@@ -107,7 +107,7 @@ button:focus {
 
 .navbar-toggler {
   position: relative !important;
-  background-color: transparent !important;
+  background-color: #0ecce1 !important;
   border-color: transparent !important;
 }
 
