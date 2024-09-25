@@ -240,9 +240,10 @@ body {
 .navbar-nav .nav-item a:hover::after {
   width: 100%;
 }
-.active {
-  color: #0ecce1 !important;
+.custom-navbar .nav-link a .active {
+  color: #ffcc00 !important; /* Active link color */
 }
+
 
 .active:hover {
   color: #0ecce1;

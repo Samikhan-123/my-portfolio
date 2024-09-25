@@ -45,7 +45,7 @@ function NavBar() {
       expanded={expand}
       fixed="top"
       expand="md"
-      className={navColour ? "sticky" : "navbar"}
+      className={navColour ? "sticky" : "custom-navbar"}
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex">
@@ -67,7 +67,8 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/"
-                activeclassname="active"
+                className="nav-link"
+                // activeclassname="active"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
@@ -77,6 +78,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/about"
+                className="nav-link"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
@@ -86,6 +88,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/project"
+                className="nav-link"
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
@@ -98,6 +101,7 @@ function NavBar() {
               <Nav.Link
                 as={Link}
                 to="/resume"
+                className="nav-link"
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
