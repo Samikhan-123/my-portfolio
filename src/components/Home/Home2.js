@@ -25,7 +25,7 @@ function Home2() {
               <br />
               <br />
 
-              I am well-grounded in the fundamental technologies as well like<span class='purple'>**Node. JS** and **JavaScript**</span>   which has helped me develop versatile and high performing web applications. What I have proposed to focus on are web technologies and products that are out in the market with an aim to improving customers experiences.
+              I am well-grounded in the fundamental technologies as well like<span class='purple'>**JavaScript**</span>   which has helped me develop versatile and high performing web applications. What I have proposed to focus on are web technologies and products that are out in the market with an aim to improving customers experiences.
               <br />
               <br />
 
