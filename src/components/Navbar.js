@@ -2,23 +2,19 @@ import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
   AiOutlineUser,
-  AiFillBulb,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
-  const [theme, setTheme] = useState("dark"); // Initialize with dark theme
 
   useEffect(() => {
-    document.body.className = theme; // Apply theme to body
 
     // Add a scroll event listener
     const scrollHandler = () => {
@@ -35,12 +31,10 @@ function NavBar() {
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
-  }, [theme]); // Dependency on theme ensures body class updates accordingly
+  }, []); // Dependency on theme ensures body class updates accordingly
 
   // Function to toggle between light and dark themes
-  const toggleTheme = () => {
-    setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  };
+
 
   return (
     <Navbar
