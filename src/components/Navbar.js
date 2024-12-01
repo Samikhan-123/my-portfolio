@@ -13,10 +13,8 @@ import { CgFileDocument } from "react-icons/cg";
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
-  const [theme] = useState("dark"); // Initialize with dark theme
 
   useEffect(() => {
-    document.body.className = theme; // Apply theme to body
 
     // Add a scroll event listener
     const scrollHandler = () => {
@@ -33,12 +31,9 @@ function NavBar() {
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
-  }, [theme]); // Dependency on theme ensures body class updates accordingly
+  }, []); 
 
-  // Function to toggle between light and dark themes
-  // const toggleTheme = () => {
-  //   setTheme((prevTheme) => (prevTheme === "light" ? "dark" : "light"));
-  // };
+ 
 
   return (
     <Navbar

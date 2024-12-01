@@ -10,11 +10,12 @@ function AboutCard() {
           <p style={{ textAlign: "justify" }}>
             Hi Everyone, I am <span className="purple">SAMI KHAN </span>
             from <span className="purple"> Lahore, Pakistan.</span>
+            <br />I am a MERN stack developer with the expertise of{" "}
+            <span className="purple">
+              MongoDB - React.js - Express.js - Node.js
+            </span>
             <br />
-            I am a MERN stack developer with the expertise of <span className="purple">MongoDB - React.js - Express.js - Node.js</span>
-            <br />
-            I am currently studding Bachelors (Virtual University) in Computer Science (BSCS),
-            Lahore.
+            Bachelor of Science in Computer Science (BSCS).
             <br />
             <br />
             Apart from coding, some other activities that I love to do!
