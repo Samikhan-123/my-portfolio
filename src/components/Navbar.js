@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
@@ -15,7 +15,6 @@ function NavBar() {
   const [navColour, updateNavbar] = useState(false);
 
   useEffect(() => {
-
     // Add a scroll event listener
     const scrollHandler = () => {
       if (window.scrollY >= 20) {
@@ -31,9 +30,7 @@ function NavBar() {
     return () => {
       window.removeEventListener("scroll", scrollHandler);
     };
-  }, []); 
-
- 
+  }, []);
 
   return (
     <Navbar
@@ -59,48 +56,51 @@ function NavBar() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
-              <Nav.Link
-                as={Link}
+              <NavLink
                 to="/"
-                className="nav-link"
-                // activeclassname="active"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
-              </Nav.Link>
+              </NavLink>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link
-                as={Link}
+              <NavLink
                 to="/about"
-                className="nav-link"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
-              </Nav.Link>
+              </NavLink>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link
-                as={Link}
+              <NavLink
                 to="/project"
-                className="nav-link"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
                 Projects
-              </Nav.Link>
+              </NavLink>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link
-                as={Link}
+              <NavLink
                 to="/resume"
-                className="nav-link"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
                 onClick={() => updateExpanded(false)}
               >
                 <CgFileDocument style={{ marginBottom: "2px" }} /> Resume
-              </Nav.Link>
+              </NavLink>
             </Nav.Item>
 
             {/* Theme toggle button */}

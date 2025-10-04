@@ -18,6 +18,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CurtainAnimation from "./components/Loader";
 import Preloader from "./components/Loader";
+import RouteNotFound from "./components/RouteNotFound";
 
 function App() {
   // const [load, upadateLoad] = useState(true);
@@ -45,7 +46,7 @@ function App() {
           <Route path="/resume" element={<Resume />} />
           <Route path="/c" element={<CurtainAnimation />} />
 
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="*" element={<RouteNotFound />} />
         </Routes>
         <Footer />
       </div>

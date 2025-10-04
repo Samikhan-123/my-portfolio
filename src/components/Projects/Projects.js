@@ -24,7 +24,7 @@ function Projects() {
                 imgPath={blogfolio}
                 isBlog={false}
                 title="Blogfolio"
-                description="I have developed a fully responsive full-Stack blogging app website using Mern-Stack Technologies. The website is fully functioned adjusts to various screen sizes, ensuring a smooth user experience. full-stack capabilities, I've crafted an engaging platform that showcases my work effectively. Its adaptive design ensures compatibility across different devices, making it accessible to a wide audience."
+                description="Developed a fully responsive full-Stack blogging app website using Mern-Stack Technologies. The website is fully functioned adjusts to various screen sizes, ensuring a smooth user experience. full-stack capabilities, I've crafted an engaging platform that showcases my work effectively. Its adaptive design ensures compatibility across different devices, making it accessible to a wide audience."
                 ghLink="https://github.com/Samikhan-123/Mern-blogging-app"
                 demoLink="https://mern-frontend-blond.vercel.app/"
               />
@@ -35,7 +35,7 @@ function Projects() {
                 imgPath={apnakhata}
                 isBlog={false}
                 title="ApnaKhata"
-                description="I created a Accounting application using Mern-Stack Technologies. ApnaKhata is a user-friendly expense tracking app designed for personal and family use. Manage your budget, track expenses, and take control of your finances with ease."
+                description="Created a Accounting application using Mern-Stack Technologies. ApnaKhata is a user-friendly expense tracking app designed for personal and family use. Manage your budget, track expenses, and take control of your finances with ease."
                 ghLink="https://github.com/Samikhan-123/ApnaKhata-2024"
                 demoLink="https://apna-khata-2024.vercel.app"
               />

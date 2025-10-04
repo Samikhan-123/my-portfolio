@@ -1,97 +1,96 @@
-// Preloader.js
+// Professional Preloader Component
 import React, { useEffect, useState } from "react";
-import { TailSpin } from "react-loader-spinner"; // Import a specific spinner
 
 const Preloader = () => {
   const [visible, setVisible] = useState(true);
+  const [progress, setProgress] = useState(0);
+  const [loadingText, setLoadingText] = useState("Initializing...");
+
+  // Simulate realistic loading progress
+  useEffect(() => {
+    const loadingSteps = [
+      { progress: 20, text: "Loading assets..." },
+      { progress: 40, text: "Preparing interface..." },
+      { progress: 60, text: "Optimizing experience..." },
+      { progress: 80, text: "Almost ready..." },
+      { progress: 100, text: "Welcome!" },
+    ];
+
+    let currentStep = 0;
+    const progressInterval = setInterval(() => {
+      if (currentStep < loadingSteps.length) {
+        const step = loadingSteps[currentStep];
+        setProgress(step.progress);
+        setLoadingText(step.text);
+        currentStep++;
+      }
+    }, 300);
+
+    return () => clearInterval(progressInterval);
+  }, []);
 
   // Hide the preloader once the page fully loads
   useEffect(() => {
     const handlePageLoad = () => {
-      setTimeout(() => setVisible(false), 500); // Slight delay for smooth transition
+      // Ensure progress reaches 100% before hiding
+      setTimeout(() => {
+        setProgress(100);
+        setLoadingText("Welcome!");
+        setTimeout(() => setVisible(false), 800); // Smooth exit
+      }, 200);
     };
 
     // Check if page has already loaded
     if (document.readyState === "complete") {
       handlePageLoad();
     } else {
-      // Add event listener for the load event
       window.addEventListener("load", handlePageLoad);
     }
 
-    return () => window.removeEventListener("load", handlePageLoad); // Cleanup on unmount
+    return () => window.removeEventListener("load", handlePageLoad);
   }, []);
 
-  if (!visible) return null; // Don't render if not visible
+  if (!visible) return null;
 
   return (
-    <div style={styles.container}>
-      <TailSpin
-        height={100}
-        width={100}
-        color="#ffffff" // Spinner color
-        ariaLabel="loading" 
-      />
-      <h1 style={styles.text}>Loading...</h1>
-      <div style={styles.animatedBackground} />
+    <div className="preloader-container ">
+      <div className="preloader-background">
+        <div className="preloader-gradient" />
+        <div className="preloader-particles">
+          {[...Array(20)].map((_, i) => (
+            <div key={i} className={`particle particle-${i + 1}`} />
+          ))}
+        </div>
+      </div>
+
+      <div className="preloader-content">
+        <div className="preloader-logo">
+          <div className="logo-circle">
+            <span className="logo-text">SK</span>
+          </div>
+        </div>
+
+        <div className="preloader-spinner">
+          <div className="spinner-ring">
+            <div className="spinner-ring-inner" />
+          </div>
+        </div>
+
+        <div className="preloader-text">
+          <h2 className="loading-title">{loadingText}</h2>
+          <div className="progress-container">
+            <div className="progress-bar">
+              <div
+                className="progress-fill"
+                style={{ width: `${progress}%` }}
+              />
+            </div>
+            <span className="progress-text">{progress}%</span>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
-
-// Styles for the Preloader component
-const styles = {
-  container: {
-    position: "fixed",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    justifyContent: "center",
-    backgroundColor: "black", // Background color
-    zIndex: 9999, // Ensure it covers other content
-    transition: "opacity 0.5s ease-out", // Smooth transition on hide
-  },
-  text: {
-    color: "white", // Text color
-    marginTop: 20,
-    fontSize: "24px", // Modern text size
-    letterSpacing: "2px", // Make text look more stylish
-  },
-  animatedBackground: {
-    position: "absolute",
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-    background: "linear-gradient(135deg, #ff4081, #0ecce1)", // Gradient background
-    opacity: 0.2, // Slight transparency for subtle effect
-    zIndex: -1, // Behind the content
-    animation: "gradientAnimation 5s ease infinite", // Background animation
-  },
-};
-
-// Keyframes for background animation
-const globalStyles = `
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-`;
-
-// Inject global styles for keyframes
-const styleSheet = document.createElement("style");
-styleSheet.type = "text/css";
-styleSheet.innerText = globalStyles;
-document.head.appendChild(styleSheet);
 
 export default Preloader;

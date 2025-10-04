@@ -22,7 +22,7 @@ function Home() {
                 <h1 className="heading-name">
                   I'M
                   <strong className="main-name"> SAMI KHAN </strong>a Full Stack
-                  Developer using <span className="purple">MERN-Stack</span>{" "}
+                  Developer using <span className="purple">MERN-STACK</span>{" "}
                   technologies.
                 </h1>
 

@@ -7,17 +7,17 @@ function Type() {
       <Typewriter
         options={{
           strings: [
-            "MERN Stack Developer",
-            "Full Stack Developer",
+            "MERN STACK Developer",
+            "FULL STACK Developer",
             "React js Developer",
             "Node js Developer",
           ],
           autoStart: true,
           loop: true,
-          delay: 75, // Typing speed
-          deleteSpeed: 50, // Deleting speed
+          delay: 90, // Typing speed
+          deleteSpeed: 100, // Deleting speed
           cursor: "|", // Custom cursor character
-          pauseFor: 1000, // Pause before starting the next string
+          pauseFor: 2000, // Pause before starting the next string
           // onStringTyped: (index) => {
           //   console.log(`Typed string index: ${index}`);
           // },

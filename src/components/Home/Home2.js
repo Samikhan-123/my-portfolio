@@ -19,26 +19,26 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              Hello! I am <span class="purple">SAMI KHAN </span> a working
-              non-stop coder person with a strong preference for web coding. I
-              embrace the challenges that come with creating dynamic and
-              innovative solutions. My journey has been marked by continuous
-              learning and hands-on experience, and I take pride in the
-              opportunity to showcase my skills and contributions on this
-              platform. I am excited to present my work and demonstrate the
-              expertise I have cultivated throughout my career.
+              Hello, my name is <span className="purple">Sami Khan</span>, and I'm a <span className="purple">MERN Stack Developer</span> with
+              more than a year of practical experience creating modern, scalable
+              web applications. Developing concepts into useful, user-focused
+              digital products is my passion.
               <br />
-              <br />I am well-grounded in the fundamental technologies as well
-              like<span class="purple">**JavaScript**</span> which has helped me
-              develop versatile and high performing web applications. What I
-              have proposed to focus on are web technologies and products that
-              are out in the market with an aim to improving customers
-              experiences.
+              I've worked with the entire stack
+              over the past year, using React to create simple, responsive user
+              interfaces, Node.js and Express to manage APIs and authentication,
+              and MongoDB to effectively organize data. I like using code to
+              solve practical issues and picking up new skills that speed up and
+              improve development. Writing clear, maintainable code and
+              consistently enhancing the user experience and product quality are
+              my main priorities. Projects in this portfolio showcase my
+              development, curiosity, and commitment to creating things that
+              genuinely work—and work well.
               <br />
               <br />
               <h3>
                 ### <span className="purple"> Main Skills</span> as a{" "}
-                <span class="purple"> MERN Stack Developer</span>
+                <span class="purple"> MERN STACK Developer</span>
               </h3>
               <br />
               <span class="purple"> **MongoDB**</span>
