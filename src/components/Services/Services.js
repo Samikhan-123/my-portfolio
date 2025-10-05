@@ -154,7 +154,7 @@ const Services = () => {
         </Row>
       </Container>
 
-      <Modal show={showModal} onHide={handleCloseModal} variant="dark" centered>
+      <Modal show={showModal} onHide={handleCloseModal} centered>
         <Modal.Header closeButton>
           <Modal.Title>Contact Me</Modal.Title>
         </Modal.Header>
@@ -164,7 +164,6 @@ const Services = () => {
             <a
               href="mailto:samikhan7816@gmail.com"
               style={{
-                color: "white",
                 fontWeight: 600,
               }}
             >
