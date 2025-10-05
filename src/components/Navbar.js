@@ -9,6 +9,7 @@ import {
   AiOutlineUser,
 } from "react-icons/ai";
 import { CgFileDocument } from "react-icons/cg";
+import { MdOutlineDesignServices } from "react-icons/md";
 
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
@@ -75,6 +76,18 @@ function NavBar() {
                 onClick={() => updateExpanded(false)}
               >
                 <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+              </NavLink>
+            </Nav.Item>
+            <Nav.Item>
+              <NavLink
+                to="/services"
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+                onClick={() => updateExpanded(false)}
+              >
+                <MdOutlineDesignServices style={{ marginBottom: "2px" }} />{" "}
+                Services
               </NavLink>
             </Nav.Item>
             <Nav.Item>
