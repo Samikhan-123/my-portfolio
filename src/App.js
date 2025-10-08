@@ -14,7 +14,7 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CurtainAnimation from "./components/Loader";
 import RouteNotFound from "./components/RouteNotFound";
-// import Loader from "./components/Loader";
+import Loader from "./components/Loader";
 
 function App() {
 
