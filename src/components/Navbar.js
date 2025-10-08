@@ -42,7 +42,7 @@ function NavBar() {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="d-flex">
-          <h4 className="purple fw-bold main-logo">SK .</h4>
+          <h4 className="purple fw-bold main-logo">SAMI KHAN</h4>
         </Navbar.Brand>
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"

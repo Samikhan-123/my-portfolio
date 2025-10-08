@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Container, Row } from "react-bootstrap";
 import Particle from "../Particle";
-import pdf from "../../Assets/../Assets/samiullah khan_MERN.pdf";
+import pdf from "../../Assets/../Assets/sami_khan_MERN.pdf";
 import { AiOutlineDownload } from "react-icons/ai";
 
 function ResumeNew() {
@@ -15,7 +15,7 @@ function ResumeNew() {
             title="resume"
             variant="primary"
             href={pdf}
-            download="samiullah khan_MERN" // This attribute forces download with a specific filename
+            download="Sami_khan_MERN" // s download with a specific filename
             style={{ maxWidth: "250px" }}
             className="mb-4"
           >
@@ -47,7 +47,7 @@ function ResumeNew() {
             title="resume"
             variant="primary"
             href={pdf}
-            download="samiullah khan_MERN" // This attribute forces download with a specific filename
+            download="Sami_khan_MERN" // download with a specific filename
             style={{ maxWidth: "250px" }}
           >
             <AiOutlineDownload />

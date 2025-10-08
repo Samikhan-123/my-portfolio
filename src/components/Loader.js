@@ -1,96 +1,133 @@
-// Professional Preloader Component
 import React, { useEffect, useState } from "react";
-
-const Preloader = () => {
-  const [visible, setVisible] = useState(true);
+import Particle from "./Particle";
+const Loader = () => {
   const [progress, setProgress] = useState(0);
-  const [loadingText, setLoadingText] = useState("Initializing...");
+  const [isVisible, setIsVisible] = useState(true);
 
-  // Simulate realistic loading progress
   useEffect(() => {
-    const loadingSteps = [
-      { progress: 20, text: "Loading assets..." },
-      { progress: 40, text: "Preparing interface..." },
-      { progress: 60, text: "Optimizing experience..." },
-      { progress: 80, text: "Almost ready..." },
-      { progress: 100, text: "Welcome!" },
-    ];
+    let timer;
+    let readyStateListener;
 
-    let currentStep = 0;
-    const progressInterval = setInterval(() => {
-      if (currentStep < loadingSteps.length) {
-        const step = loadingSteps[currentStep];
-        setProgress(step.progress);
-        setLoadingText(step.text);
-        currentStep++;
-      }
-    }, 300);
-
-    return () => clearInterval(progressInterval);
-  }, []);
-
-  // Hide the preloader once the page fully loads
-  useEffect(() => {
-    const handlePageLoad = () => {
-      // Ensure progress reaches 100% before hiding
-      setTimeout(() => {
-        setProgress(100);
-        setLoadingText("Welcome!");
-        setTimeout(() => setVisible(false), 800); // Smooth exit
-      }, 200);
+    const onReady = () => {
+      setProgress(100);
+      clearInterval(timer);
+      setTimeout(() => setIsVisible(false), 500);
     };
 
-    // Check if page has already loaded
+    const simulateProgress = () => {
+      timer = setInterval(() => {
+        setProgress((prev) => {
+          if (prev >= 95) {
+            clearInterval(timer);
+            return 95;
+          }
+          // More realistic progress simulation
+          const increment = Math.random() * 10 + 5; // 5-15% increments
+          return Math.min(prev + increment, 95);
+        });
+      }, 300);
+    };
+
+    // Check if page is already loaded
     if (document.readyState === "complete") {
-      handlePageLoad();
+      onReady();
     } else {
-      window.addEventListener("load", handlePageLoad);
+      simulateProgress();
+
+      // Use both load and readystatechange for better coverage
+      readyStateListener = () => {
+        if (document.readyState === "complete") {
+          onReady();
+        }
+      };
+
+      document.addEventListener("readystatechange", readyStateListener);
+      window.addEventListener("load", onReady);
     }
 
-    return () => window.removeEventListener("load", handlePageLoad);
+    // Fallback - ensure loader disappears after max 4 seconds
+    const fallback = setTimeout(() => {
+      onReady();
+    }, 4000);
+
+    return () => {
+      clearInterval(timer);
+      clearTimeout(fallback);
+      document.removeEventListener("readystatechange", readyStateListener);
+      window.removeEventListener("load", onReady);
+    };
   }, []);
 
-  if (!visible) return null;
+  if (!isVisible) return null;
 
   return (
-    <div className="preloader-container ">
-      <div className="preloader-background">
-        <div className="preloader-gradient" />
-        <div className="preloader-particles">
-          {[...Array(20)].map((_, i) => (
-            <div key={i} className={`particle particle-${i + 1}`} />
-          ))}
+    <>
+      <Particle />
+      <div
+        style={{
+          position: "fixed",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          background: "#0f0f0f",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          zIndex: 9999,
+        }}
+      >
+        <div style={{ textAlign: "center", width: "220px" }}>
+          <div
+            style={{
+              marginBottom: "16px",
+              color: "#ffffff", // Changed to white
+              fontSize: "18px",
+              fontWeight: "600",
+              letterSpacing: "1px",
+            }}
+          >
+            Sami Khan
+          </div>
+          <div
+            style={{
+              width: "100%",
+              height: "6px",
+              background: "rgba(255,255,255,0.1)",
+              borderRadius: "3px",
+              marginBottom: "12px",
+              overflow: "hidden",
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                width: `${progress}%`,
+                height: "100%",
+                background: "linear-gradient(90deg, #ffffff 40%, #f0f0f0 100%)", // Changed to white gradient
+                borderRadius: "3px",
+                transition: "width 0.3s ease-out",
+                boxShadow: "0 0 8px rgba(255,255,255,0.5)", // White glow
+                position: "absolute",
+                left: 0,
+                top: 0,
+              }}
+            />
+          </div>
+          {/* <div
+          style={{
+            color: "#ffffff", // Changed to white
+            fontSize: "15px",
+            fontWeight: "500",
+            letterSpacing: "0.5px",
+          }}
+        >
+          {Math.round(progress)}%
+        </div> */}
         </div>
       </div>
-
-      <div className="preloader-content">
-        <div className="preloader-logo">
-          <div className="logo-circle">
-            <span className="logo-text">SK</span>
-          </div>
-        </div>
-
-        <div className="preloader-spinner">
-          <div className="spinner-ring">
-            <div className="spinner-ring-inner" />
-          </div>
-        </div>
-
-        <div className="preloader-text">
-          <h2 className="loading-title">{loadingText}</h2>
-          <div className="progress-container">
-            <div className="progress-bar">
-              <div
-                className="progress-fill"
-                style={{ width: `${progress}%` }}
-              />
-            </div>
-            <span className="progress-text">{progress}%</span>
-          </div>
-        </div>
-      </div>
-    </div>
+    </>
   );
 };
 
-export default Preloader;
+export default Loader;

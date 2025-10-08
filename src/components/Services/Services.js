@@ -3,6 +3,7 @@ import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import ServiceCard from "./ServiceCard";
 import "./Services.css";
 import Particle from "../Particle";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const [showModal, setShowModal] = useState(false);
@@ -145,9 +146,12 @@ const Services = () => {
                 >
                   Get In Touch
                 </a>
-                <a href="/resume" className="btn btn-outline-primary cta-btn">
+                <Link
+                  to="/resume"
+                  className="btn btn-outline-primary cta-btn"
+                >
                   View Resume
-                </a>
+                </Link>
               </div>
             </div>
           </Col>
@@ -161,14 +165,14 @@ const Services = () => {
         <Modal.Body className="text-center">
           <p>
             You can reach me at: <br />
-            <a
-              href="mailto:samikhan7816@gmail.com"
+            <Link
+              to="mailto:samikhan7816@gmail.com"
               style={{
                 fontWeight: 600,
               }}
             >
               samikhan7816@gmail.com
-            </a>
+            </Link>
           </p>
         </Modal.Body>
         <Modal.Footer>

@@ -13,16 +13,14 @@ import "./style.css";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import CurtainAnimation from "./components/Loader";
-import Preloader from "./components/Loader";
 import RouteNotFound from "./components/RouteNotFound";
+// import Loader from "./components/Loader";
 
 function App() {
 
   return (
     <Router>
-      <Preloader />
-
-      {/* <Preloader load={load} /> */}
+      {/* <Loader /> */}
       <div className="App animate-top">
         <Navbar />
         <ScrollToTop />

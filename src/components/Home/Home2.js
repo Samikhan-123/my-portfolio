@@ -19,66 +19,66 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              Hello, my name is <span className="purple">Sami Khan</span>, and I'm a <span className="purple">MERN Stack Developer</span> with
+              Hello, my name is <span className="purple">Sami Khan</span>, and
+              I'm a <span className="purple">MERN Stack Developer</span> with
               more than a year of practical experience creating modern, scalable
               web applications. Developing concepts into useful, user-focused
               digital products is my passion.
               <br />
-              I've worked with the entire stack
-              over the past year, using React to create simple, responsive user
-              interfaces, Node.js and Express to manage APIs and authentication,
-              and MongoDB to effectively organize data. I like using code to
-              solve practical issues and picking up new skills that speed up and
-              improve development. Writing clear, maintainable code and
-              consistently enhancing the user experience and product quality are
-              my main priorities. Projects in this portfolio showcase my
-              development, curiosity, and commitment to creating things that
-              genuinely work—and work well.
+              I've worked with the entire stack over the past year, using React
+              to create simple, responsive user interfaces, Node.js and Express
+              to manage APIs and authentication, and MongoDB to effectively
+              organize data. I like using code to solve practical issues and
+              picking up new skills that speed up and improve development.
+              Writing clear, maintainable code and consistently enhancing the
+              user experience and product quality are my main priorities.
+              Projects in this portfolio showcase my development, curiosity, and
+              commitment to creating things that genuinely work—and work well.
               <br />
               <br />
               <h3>
                 ### <span className="purple"> Main Skills</span> as a{" "}
-                <span class="purple"> MERN STACK Developer</span>
+                <span className="purple"> MERN STACK Developer</span>
               </h3>
               <br />
-              <span class="purple"> **MongoDB**</span>
+              <span className="purple"> **MongoDB**</span>
               <br />
               Proficient in designing and managing NoSQL databases, optimizing
               queries, and ensuring data integrity.
               <br />
               <br />
-              <span class="purple"> **Express.js**</span>
+              <span className="purple"> **Express.js**</span>
               <br />
               Experienced in building robust server-side applications and
               creating RESTful APIs.
               <br />
               <br />
-              <span class="purple"> **React.js**</span>
+              <span className="purple"> **React.js**</span>
               <br />
               Skilled in developing dynamic user interfaces, implementing state
               management, and optimizing performance for responsive web
               applications.
               <br />
               <br />
-              <span class="purple"> **Node.js**</span>
+              <span className="purple"> **Node.js**</span>
               <br />
               Strong knowledge of server-side JavaScript, asynchronous
               programming, and building scalable network applications.
               <br />
               <br />
-              <span class="purple"> **JavaScript (ES6+)**</span>
+              <span className="purple"> **JavaScript (ES6+)**</span>
               <br />
               Proficient in modern JavaScript features, including promises,
               async/await, and modular programming.
               <br />
               <br />
-              <span class="purple"> **HTML & CSS**</span>
+              <span className="purple"> **HTML & CSS**</span>
               <br />
               Solid understanding of web standards, responsive design, and
               accessibility principles.
               <br />
               <br />
-              <span class="purple">
+              <span className="purple">
                 {" "}
                 **CSS Frameworks (Bootstrap, Material-UI, Ant-Design)**
               </span>
@@ -87,14 +87,14 @@ function Home2() {
               custom components, and integrating them with your application.
               <br />
               <br />
-              <span class="purple"> **State Management**</span>
+              <span className="purple"> **State Management**</span>
               <br />
               Experienced in using Redux/Reduxtoolkit or similar state
               management libraries to manage application state and minimize
               bugs.
               <br />
               <br />
-              <span class="purple"> **Command Line Interface (CLI)**</span>
+              <span className="purple"> **Command Line Interface (CLI)**</span>
               <br />
               Familiar with popular command-line tools, such as npm, yarn, and
               create-react-app, to build and manage projects.
@@ -103,7 +103,7 @@ function Home2() {
               {/* - **Performance Optimization**: Familiar with techniques like code splitting, lazy loading, and caching to improve performance and reduce load times. */}
               {/* <br />
               <br /> */}
-              <span class="purple"> **Deployment**</span>
+              <span className="purple"> **Deployment**</span>
               <br />
               Familiar with deployment strategies, including hosting platforms
               like Heroku, Vercel, and Netlify etc.
@@ -113,7 +113,7 @@ function Home2() {
               {/* - **Project Management**: Experienced in managing projects, tracking progress, and communicating with team members. */}
               {/* <br />
               <br /> */}
-              <span class="purple"> **Version Control (Git)**</span>
+              <span className="purple"> **Version Control (Git)**</span>
               <br />
               Familiar with Git for version control, collaboration, and code
               management.
@@ -122,7 +122,10 @@ function Home2() {
               {/* - **Collaboration**: Familiar with agile methodologies, scrum, and other project management tools, as well as working in a team environment. */}
               {/* <br />
               <br /> */}
-              <span class="purple"> **Code Quality & Maintainability**</span>
+              <span className="purple">
+                {" "}
+                **Code Quality & Maintainability**
+              </span>
               <br />
               Proficient in writing clean, modular, and maintainable code, as
               well as maintaining existing codebases.
@@ -130,7 +133,7 @@ function Home2() {
               {/* <span class='purple'>- **Testing & Debugging**</span> : Knowledge of testing frameworks and debugging tools to ensure code quality and reliability. */}
               <br />
               <br />I hope you enjoyed going through my{" "}
-              <span class="purple"> portfolio</span> and wishing you have
+              <span className="purple"> portfolio</span> and wishing you have
               enjoyed it. I need to admit that I am eager to get in touch and
               able to work on some interesting and engaging projects! ---
             </p>
