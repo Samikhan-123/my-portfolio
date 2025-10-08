@@ -20,7 +20,7 @@ function App() {
 
   return (
     <Router>
-      {/* <Loader /> */}
+      <Loader />
       <div className="App animate-top">
         <Navbar />
         <ScrollToTop />
